@@ -1,5 +1,7 @@
 // Funcão para codificar uma String com Cifra de César
 function codificar(deslocamento, entrada) {
+    // String que vai acumular as letras criptografadas
+    let resultado = "";
 
     // Percorre cada caractere da string de entrada
     for (i = 0; i < entrada.length; i++) {
@@ -7,13 +9,14 @@ function codificar(deslocamento, entrada) {
         const codLetraASC = entrada.charCodeAt(i);
 
         // Aplica a formula da Cifra de César
-        const criptog = ((codLetraASC - 65 + deslocamento) % 26) + 65;
+        const cripto = ((codLetraASC - 65 + deslocamento) % 26) + 65;
         
-        // Printa letra por letra
-        console.log(String.fromCharCode(criptog))
-
+        // adiciona cada letra ao Resultado
+        resultado += String.fromCharCode(cripto);
     };
+    // Printa o resultado
+    console.log(resultado);
 };
 
 // String de exemplo, para fins de teste
-codificar(1, "CAZA");
+codificar(1, "CASA");
