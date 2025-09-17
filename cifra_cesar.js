@@ -17,9 +17,14 @@ function codificar(deslocamento, entrada) {
         } else if (codLetraASC >= 97 && codLetraASC <= 122) {
             valorPrimeiroUnicode = 97;
 
-        // Qualquer outro caractere não é aceito
+        // Espaço: mantém sem cifrar
+        } else if (entrada[i] === " ") {
+            resultado += " ";
+            continue;
+
+        // Qualquer outro caractere não aceito
         } else {
-            throw new Error(`Caractere inválido encontrado: "${entrada[i]}". Apenas letras de A-Z ou a-z são aceitas.`);
+            throw new Error(`Caractere inválido encontrado: "${entrada[i]}". Apenas letras de A-Z, a-z ou espaços são aceitos.`);
         }
 
         // Cifra César
@@ -39,5 +44,5 @@ function decodificar(deslocamento, entrada) {
 }
 
 // Testes
-// console.log(codificar(327, "cAsa"));   // "rPhp"
-// console.log(decodificar(327, "rPhp")); // "casa"
+// console.log(codificar(327, "cAsa bOnItA"));    // "rPhp qDcXiP"
+// console.log(decodificar(327, "rPhp qDcXiP"));  // "cAsa bOnItA"
