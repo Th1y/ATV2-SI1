@@ -30,13 +30,16 @@ function codificar(deslocamento, entrada) {
         // Concatena o caractere criptografado ao resultado
         resultado += String.fromCharCode(cripto);
     };
-    // Printa o resultado
-    console.log(resultado);
+    // Retorna o resultado
+    return(resultado);
 };
 
-// Exemplo de uso da função com exito
-codificar(7, "AbACaTe")
+// Função para decodificar uma String com Cifra de César usando deslocamento invertido 
+function decodificar(deslocamento, entrada) {
+    return codificar (-deslocamento, entrada);
+};
 
-// Exemplo de uso da Função com Erro
-//codificar(1, "CaS3");
+// Testes
+console.log(codificar(1, "casa"));   // "fdvd"
+console.log(decodificar( 1, "cAsa")); // "casa"
 
