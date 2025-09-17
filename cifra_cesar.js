@@ -1,22 +1,42 @@
 // Funcão para codificar uma String com Cifra de César
 function codificar(deslocamento, entrada) {
-    // String que vai acumular as letras criptografadas
+    // Variavel que vai acumular as letras criptografadas
     let resultado = "";
 
+    // Variavel com  o valor da primeira
+    let valorPrimeiroUnicode;
+    
     // Percorre cada caractere da string de entrada
-    for (i = 0; i < entrada.length; i++) {
-        // pega o código ASCII do caractere atual
+    for (let i = 0; i < entrada.length; i++) {
+        // Obtém o código ASCII do caractere atual
         const codLetraASC = entrada.charCodeAt(i);
 
+        // Se for letra maiúscula (A-Z), define base como 65
+        if (codLetraASC >= 65 && codLetraASC <= 90 ) {
+            valorPrimeiroUnicode = 65;
+       
+        // Se for letra minúscula (a-z), define base como 97
+        } else if (codLetraASC >= 97 && codLetraASC <= 122) {
+            valorPrimeiroUnicode = 97; // meu Deus me ajuda 
+       
+        // Se não for uma letra valida lança um erro com mensagem descritiva
+        } else {
+            throw new Error(`Caractere inválido encontrado: "${entrada[i]}". Apenas letras de A-Z ou a-z são aceitas.`);        
+        };
+
         // Aplica a formula da Cifra de César
-        const cripto = ((codLetraASC - 65 + deslocamento) % 26) + 65;
+        const cripto = ((codLetraASC - valorPrimeiroUnicode + deslocamento) % 26) + valorPrimeiroUnicode;
         
-        // adiciona cada letra ao Resultado
+        // Concatena o caractere criptografado ao resultado
         resultado += String.fromCharCode(cripto);
     };
     // Printa o resultado
     console.log(resultado);
 };
 
-// String de exemplo, para fins de teste
-codificar(1, "CASA");
+// Exemplo de uso da função com exito
+codificar(7, "AbACaTe")
+
+// Exemplo de uso da Função com Erro
+//codificar(1, "CaS3");
+
