@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cifra de Cesar</title>
+</head>
+<body>
+    <h1>Vamos realizar a criptografia utilzando a cifra de cesar?</h1>
+
+    <form id="formularioCesar" method="post">
+      
+        <label for="textoAntesCC">Insira seu texto para criptografar</label>
+        <input type="text" name="textoAntesCC" id="textoAntesCC" required>
+
+       <label for="deslocamento">Escolha o deslocamento</label>
+       <input type="number" name="deslocamento" id="deslocamento" required>
+
+       <button type="submit">criptografar</button>
+
+       <p id="resultado">Texto criptografado: </p>
+    </form>
+    
+    <!-- Como nao esta usando live server -->
+    <script src="cifra_cesar.js"></script>
+    <script src="app.js"></script>
+  
+    <!-- Caso estivesse utilizando live server
+       <script type="module" src="app.js"></script>
+       -->
+</body>
+</html>
