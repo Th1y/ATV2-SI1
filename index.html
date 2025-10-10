@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cifra de Cesar</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <h1>Vamos realizar a criptografia utilzando a cifra de cesar?</h1>
 
-    <form id="formularioCesar" method="post">
-      
-        <label for="textoAntesCC">Insira seu texto para criptografar</label>
-        <input type="text" name="textoAntesCC" id="textoAntesCC" required>
+    <div class="container">
+        <form id="formularioCesar" method="post">
+            
+            <!-- Campo para o texto a criptografar-->
+            <label for="textoAntesCC">Insira seu texto para criptografar</label>
+            <input type="text" name="textoAntesCC" id="textoAntesCC" required>
 
-       <label for="deslocamento">Escolha o deslocamento</label>
-       <input type="number" name="deslocamento" id="deslocamento" required>
+            <!-- Campo com o deslocamento da criptografia-->
+            <label for="deslocamento">Escolha o deslocamento</label>
+            <input type="number" name="deslocamento" id="deslocamento" required>
 
-       <button type="submit">criptografar</button>
+            <button type="submit">criptografar</button>
 
-       <p id="resultado">Texto criptografado: </p>
-    </form>
-    
+            <p id="resultado">Texto criptografado: </p>
+        </form>
+    </div>
     <!-- Como nao esta usando live server -->
-    <script src="cifra_cesar.js"></script>
-    <script src="app.js"></script>
+    <script src="scripts/cifra_cesar.js"></script>
+    <script src="scripts/app.js"></script>
   
     <!-- Caso estivesse utilizando live server
        <script type="module" src="app.js"></script>
