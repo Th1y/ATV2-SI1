@@ -36,16 +36,8 @@ function codificar(deslocamento, entrada) {
     }
 
     return resultado;
-}
+};
 
-// Função para decodificar (sem uso apos implementacao do codigo front end)
-//function decodificar(deslocamento, entrada) {
-//    return codificar(-deslocamento, entrada);
-// }
-
-// caso estivesse usando live server
-// export {codificar, decodificar};
-
-// Testes
-// console.log(codificar(327, "cAsa bOnItA"));    // "rPhp qDcXiP"
-// console.log(decodificar(327, "rPhp qDcXiP"));  // "cAsa bOnItA"
+function decodificar(deslocamento, entrada) {
+    return codificar(-deslocamento, entrada);
+;}
