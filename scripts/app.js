@@ -1,19 +1,27 @@
-// caso estivesse utilizando live server: 
-// import {codificar, decodificar} from './cifra_cesar.js';
-
-const texto = document.getElementById('formularioCesar'); //
-const resultado = document.getElementById('resultado'); // paragrafo de resultado
+const texto = document.getElementById('formularioCesar');
+const inputResultado = document.getElementById('resultado');
 
 texto.addEventListener('submit', function(event) {
-    event.preventDefault(); // evita que o formulario seja enviado para o servidor e recarregue a pagina
+    event.preventDefault(); // Evita que o formulario seja enviado para o servidor e recarregue a pagina
     
-    const dados = new FormData(formularioCesar); // lista de objetos do formulario
-    const textoAntes = dados.get('textoAntesCC');
-    const deslocamento = dados.get('deslocamento');
-    const deslocamentoN = parseInt(deslocamento);
+    // Lista de objetos do formulario
+    const dados = new FormData(formularioCesar); 
     
-    const criptoCC = codificar(deslocamentoN, textoAntes);
+    const texto = dados.get('textoAntesCC');
+    const deslocamento = parseInt(dados.get('deslocamento'));
     
-    resultado.textContent = `Texto criptografado: ${criptoCC}`;
+    if (criptoValue == 0) {
+        const resultado = codificar(deslocamento, texto);
+        inputResultado.value = resultado;
+        console.log(criptoValue);
+    } else {
+        const resultado = decodificar(deslocamento, texto);
+        inputResultado.value = resultado;
+        console.log(criptoValue);
+    };
+    // Obtem os inputs do formulario e criptografa com a funcao "codificar"
+    
 
+    // resultado no input resultado
+    // inputResultado.value = resultado;
 });
