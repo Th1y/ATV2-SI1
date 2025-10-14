@@ -1,27 +1,23 @@
 const texto = document.getElementById('formularioCesar');
+// Constante que vai receber o campo ReadOnly "resultado"
 const inputResultado = document.getElementById('resultado');
 
 texto.addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que o formulario seja enviado para o servidor e recarregue a pagina
     
-    // Lista de objetos do formulario
+    // Constante que vai receber os dados de "formulario Cesar como objetos"
     const dados = new FormData(formularioCesar); 
     
+    // recebe o Deslocamento e texto dos campos do formulario
     const texto = dados.get('textoAntesCC');
     const deslocamento = parseInt(dados.get('deslocamento'));
     
     if (criptoValue == 0) {
-        const resultado = codificar(deslocamento, texto);
-        inputResultado.value = resultado;
-        console.log(criptoValue);
+        inputResultado.value = codificar(deslocamento, texto);
+        console.log(criptoValue); // apenas para debug
     } else {
-        const resultado = decodificar(deslocamento, texto);
-        inputResultado.value = resultado;
-        console.log(criptoValue);
+        inputResultado.value = decodificar(deslocamento, texto);
+        console.log(criptoValue); // apenas para debug
     };
-    // Obtem os inputs do formulario e criptografa com a funcao "codificar"
-    
 
-    // resultado no input resultado
-    // inputResultado.value = resultado;
 });
