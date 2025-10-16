@@ -1,0 +1,80 @@
+:root { /* Estilo padrão de cores, Dark theme */
+    --bg-dark: hsl(0 0% 5%);
+    --bg: hsl(0 0% 10%);
+    --bg-dark-important: hsl(0 0% 15%);
+    --button-hover: hsl(0 0% 20%);
+    --text: hsl(0 0% 95%);
+    --text-muted: hsl(0 0% 70%);
+    --border: hsl()(0 0% 30%);
+    --gradient: linear-gradient(0deg, var(--bg), var(--bg-light));
+}
+
+body.light { /* Light Theme */
+    --bg-dark: hsl(0 0% 90%);
+    --bg: hsl(0 0% 85%);
+    --bg-dark-important: hsl(0 0% 75%);
+    --button-hover: hsl(0 0% 60%);
+    --bg-light: hsl(0 0% 100%);
+    --text: hsl(0 0% 5%);
+    --text-muted: (0 0% 30%);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-muted);
+}
+
+div {
+    background: var(--bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+button {
+    background: var(--bg-dark-important);
+    padding: 0.5rem 1rem 0.7rem 1rem;
+    color: var(--text);
+    font-weight: 700;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border: none;
+}
+
+button:hover {
+    background: var(--button-hover)
+}
+
+/* estilo caso "queroCriptografar" seja 1 (descriptografar) */
+#codificarOuDecodificar {
+    background: green;
+}
+
+
+#codificarOuDecodificar.decodificar {
+    background: blue;
+}
+
+
+section {
+    display: flex;
+}
+
+label {
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+input {
+    background: var(--bg-dark-important);
+    border: none;
+    border-radius: 0.4rem;
+
+}
+
+input, textarea, select {
+    color: var(--text-muted)
+}
+
+input[type=number] { /* remove o incremento e decremento do campo input tipo number */
+    -moz-appearance: textfield;
+}
