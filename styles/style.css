@@ -1,4 +1,4 @@
-:root { /* Estilo padrão de cores, Dark theme */
+:root { /* Estilo padrão de cores definidos em variaveis, Dark theme */
     --bg-dark: hsl(0 0% 5%);
     --bg: hsl(0 0% 10%);
     --bg-dark-important: hsl(0 0% 15%);
@@ -9,7 +9,7 @@
     --gradient: linear-gradient(0deg, var(--bg), var(--bg-light));
 }
 
-body.light { /* Light Theme */
+body.light { /* Tema claro, definido em variaveis */
     --bg-dark: hsl(0 0% 90%);
     --bg: hsl(0 0% 85%);
     --bg-dark-important: hsl(0 0% 75%);
@@ -19,18 +19,12 @@ body.light { /* Light Theme */
     --text-muted: (0 0% 30%);
 }
 
-body {
+body { /* Tema Padrão - Dark */
     background: var(--bg-dark);
     color: var(--text-muted);
 }
 
-div {
-    background: var(--bg);
-    padding: 1.5rem;
-    border-radius: 1rem;
-}
-
-button {
+button { /* Estilo para todos os botões */
     background: var(--bg-dark-important);
     padding: 0.5rem 1rem 0.7rem 1rem;
     color: var(--text);
@@ -40,16 +34,16 @@ button {
     border: none;
 }
 
-button:hover {
+button:hover { /* estilo para o botao quando presionado*/
     background: var(--button-hover)
 }
 
-/* estilo caso "queroCriptografar" seja 1 (descriptografar) */
+/* estilo caso "queroCriptografar" seja 0 (descriptografar) */
 #codificarOuDecodificar {
     background: green;
 }
 
-
+/* estilo caso "queroCriptografar" seja 1 (descriptografar) */
 #codificarOuDecodificar.decodificar {
     background: blue;
 }
@@ -68,7 +62,11 @@ input {
     background: var(--bg-dark-important);
     border: none;
     border-radius: 0.4rem;
+    padding: 30px;
+}
 
+#deslocamento {
+    padding:10px;
 }
 
 input, textarea, select {
@@ -77,4 +75,23 @@ input, textarea, select {
 
 input[type=number] { /* remove o incremento e decremento do campo input tipo number */
     -moz-appearance: textfield;
+}
+
+div.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-auto-flow: row;
+}
+
+div.item {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto;
+    background: var(--bg);
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px;
+   
 }
