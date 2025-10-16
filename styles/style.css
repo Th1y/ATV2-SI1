@@ -24,6 +24,10 @@ body { /* Tema Padrão - Dark */
     color: var(--text-muted);
 }
 
+h1 {
+    text-align: center;
+}
+
 button { /* Estilo para todos os botões */
     background: var(--bg-dark-important);
     padding: 0.5rem 1rem 0.7rem 1rem;
