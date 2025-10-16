@@ -9,36 +9,36 @@
 </head>
 <body>
     <h1>Vamos realizar a criptografia utilzando a cifra de cesar?</h1>
-
-    <button id="mudarTema">Mudar tema</button>
-
-    <form id="formularioCesar" method="post">
-            
-        <!-- Campo para o texto a criptografar-->
-        <div id="divTexto">
-            <label for="textoAntesCC">Insira seu texto para criptografar</label>
-            <input type="text" name="textoAntesCC" id="textoAntesCC" required>
-        </div>
-        <br>
-
-        <!-- Campo com o deslocamento da criptografia-->
-        <div id="deslocamento">
-            <label for="deslocamento">Escolha o deslocamento</label>
-            <input type="number" name="deslocamento" id="deslocamento" required>
-             
-            <!-- Botao para seleção entre Criptografar e descriptografar-->
-        <button type="button" id="codificarOuDecodificar">Quero Criptografar</button>
-        </div>
-        <br>
-        
-        <!-- Botao para criptografar e input resultado-->
-        <div>
-            <button type="submit" id="botaoCriptografar">criptografar Mensagem</button>
-            <label for="resultado"></label>
-            <input type="text" name="resultado" id="resultado" readonly>
-        </div>
-    </form>
     
+    <div class="container"> 
+       
+        <form id="formularioCesar" method="post">       
+            
+            <div class="item">
+                <a href="sobre">sobre</a>
+                <button id="mudarTema">Mudar tema</button>
+
+                 <!-- Campo para o texto a criptografar -->
+                <label for="textoAntesCC">Insira seu texto para criptografar</label>
+                <input type="text" name="textoAntesCC" id="textoAntesCC" required>
+        
+                <!-- Campo com o deslocamento da criptografia -->
+                <label for="deslocamento">Escolha o deslocamento</label>
+                <input type="number" name="deslocamento" id="deslocamento" required><br>
+            </div>
+
+            <div class="item">
+                 <!-- Botao para criptografar -->
+                <button type="button" id="codificarOuDecodificar">Quero Criptografar</button>
+                <button type="submit" id="botaoCriptografar">criptografar Mensagem</button>
+                
+                <!--campo resultado -->
+                <label for="resultado"></label>
+                <input type="text" name="resultado" id="resultado" readonly>
+            </div>
+        </form>
+    </div>
+
     <script src="scripts/cifra_cesar.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/botoes.js"></script>
