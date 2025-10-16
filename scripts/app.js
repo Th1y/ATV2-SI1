@@ -15,6 +15,7 @@ texto.addEventListener('submit', function(event) {
     if (criptoValue == 0) {
         inputResultado.value = codificar(deslocamento, texto);
         console.log(criptoValue); // apenas para debug
+        
     } else {
         inputResultado.value = decodificar(deslocamento, texto);
         console.log(criptoValue); // apenas para debug
