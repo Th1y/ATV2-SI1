@@ -94,8 +94,7 @@ div.item {
     display: grid;
     grid-template-columns: auto;
     background: var(--bg);
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     padding: 10px;
     margin: 10px;
-   
 }
