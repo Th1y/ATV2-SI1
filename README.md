@@ -1,6 +1,6 @@
 # Cifra de César – Projeto Modular com HTML, CSS e JavaScript
 
-Este projeto foi desenvolvido inicialmente como uma atividade acadêmica com o objetivo de implementar **a Cifra de César em JavaScript**, recebendo uma **string** e um **valor numérico de deslocamento** e retornando o texto criptografado.
+Este projeto foi desenvolvido inicialmente como uma atividade acadêmica com o objetivo de implementar **a Cifra de César em JavaScript**, recebendo uma **string** e um **valor numérico de deslocamento** e retornando o texto criptografado. 
 
 Com o tempo, o projeto foi expandido para se tornar uma aplicação mais completa e interativa, incluindo:
 
@@ -16,4 +16,7 @@ Com o tempo, o projeto foi expandido para se tornar uma aplicação mais complet
 
 A Cifra de César é um dos métodos de criptografia mais antigos conhecidos. Ela consiste em **deslocar as letras do alfabeto** um número fixo de posições.
 
-Exemplo (deslocamento = 3):
+Exemplo: ABC 
+(deslocamento = 3): DEF 
+
+NÃO USE COMO FORMA DE CRIPTOGRAFIA, CIFRA CESAR È EXTREMAMENTE FACIL DE QUEBRAR
